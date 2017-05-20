@@ -40,3 +40,6 @@ public class Solution {
         res.add(res_tmp);
     }
 }
+
+
+Solution 2:
