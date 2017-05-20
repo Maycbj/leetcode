@@ -37,3 +37,22 @@ public class Solution {
         return res;
     }
 }
+
+############################
+Solution 3
+############################
+public class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if(root == null) return res;
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        s.push(root);
+        while(!s.empty()){
+            TreeNode node = s.pop();
+            res.add(node.val);
+            if(node.right != null)  s.push(node.right);
+            if(node.left != null)  s.push(node.left);
+        }
+        return res;
+    }
+}
